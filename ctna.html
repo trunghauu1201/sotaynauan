@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sổ Tay Nấu Ăn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sổ Tay Nấu Ăn Thường Nhật</h1>
+        
+        <div class="filters">
+            <input type="text" id="searchIngredient" placeholder="🔍 Nhập tên món hoặc nguyên liệu...">
+            
+            <select id="sortName">
+                <option value="asc">Sắp xếp: A - Z</option>
+                <option value="desc">Sắp xếp: Z - A</option>
+            </select>
+
+            <select id="filterDifficulty">
+                <option value="">Độ khó: Tất cả</option>
+                <option value="1">1 Sao (Rất dễ)</option>
+                <option value="2">2 Sao (Dễ)</option>
+                <option value="3">3 Sao (Vừa)</option>
+            </select>
+
+            <label>Thời gian tối đa: <span id="timeValue">60</span> phút</label>
+            <input type="range" id="filterTime" min="5" max="60" step="5" value="60">
+
+            <div class="random-meal-section" style="background: #fff3e0; padding: 20px; border-radius: 12px; margin-bottom: 30px; text-align: center; border: 2px dashed #ffb74d;">
+            <h2 style="color: #e65100; margin-bottom: 10px;">🤔 Hôm nay ăn gì?</h2>
+            <p style="margin-bottom: 15px; color: #555;">Để hệ thống chọn ngẫu nhiên một mâm cơm gia đình 3 món cho bạn nhé!</p>
+            <button onclick="generateRandomMeal()" style="background: #ff7043; color: white; border: none; padding: 12px 25px; font-size: 1.1em; border-radius: 8px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 6px rgba(255, 112, 67, 0.3);">🎲 Lên mâm cơm ngẫu nhiên</button>
+            
+            <div id="randomMealResult" style="display: none; margin-top: 20px; text-align: left; background: white; padding: 15px; border-radius: 8px; border-left: 5px solid #ff7043;">
+                <h3 style="margin-bottom: 10px; color: #2c3e50;">✨ Gợi ý mâm cơm hôm nay:</h3>
+                <ul style="list-style: none; padding-left: 0; font-size: 1.1em; line-height: 1.8;">
+                    <li>🥣 <strong>Món Canh:</strong> <span id="randomCanh" style="color: #e65100; cursor: pointer; text-decoration: underline;"></span></li>
+                    <li>🍗 <strong>Món Mặn:</strong> <span id="randomMan" style="color: #e65100; cursor: pointer; text-decoration: underline;"></span></li>
+                    <li>🥗 <strong>Món Xào/Luộc:</strong> <span id="randomXao" style="color: #e65100; cursor: pointer; text-decoration: underline;"></span></li>
+                </ul>
+            </div>
+        </div>
+        <label style="cursor: pointer; font-weight: bold; color: #e65100; display: flex; align-items: center; gap: 5px;">
+            <input type="checkbox" id="filterFav" style="width: 18px; height: 18px;"> ❤️ Yêu thích
+        </label>
+        </div>
+
+        <div id="recipe-list" class="grid"></div>
+    </div>
+
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Tên món</h2>
+            <p><strong>Nguyên liệu:</strong> <span id="modalIngredients"></span></p>
+            <div id="modalInstructions"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
