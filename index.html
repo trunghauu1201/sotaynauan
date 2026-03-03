@@ -49,6 +49,13 @@
                     <li>🍗 <strong>Món Mặn:</strong> <span id="randomMan" style="color: #e65100; cursor: pointer; text-decoration: underline;"></span></li>
                     <li>🥗 <strong>Món Xào/Luộc:</strong> <span id="randomXao" style="color: #e65100; cursor: pointer; text-decoration: underline;"></span></li>
                 </ul>
+                
+                <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px; background: #f4f1ea; padding: 8px 15px; border-radius: 20px; border: 1px dashed #d9d0c1; width: fit-content;">
+                    <strong style="color: #8c3a3a; font-family: 'Merriweather', serif;">Khẩu phần:</strong>
+                    <input type="number" id="randomPortionCount" value="4" min="1" max="20" style="width: 45px; border: none; background: transparent; text-align: center; font-weight: bold; color: #8c3a3a; outline: none; font-size: 1.1em;">
+                    <strong style="color: #8c3a3a; font-family: 'Merriweather', serif;">người</strong>
+                </div>
+
                 <button id="addToCartBtn" onclick="addRandomToCart()" style="background: #4caf50; color: white; border: none; padding: 10px 20px; font-family: 'Lora', serif; font-size: 1em; margin-top: 15px; cursor: pointer; border-radius: 4px; display: none; width: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><i style="font-style: normal;">🛒</i> Đưa mâm cơm vào giỏ đi chợ</button>
             </div>
         </div>

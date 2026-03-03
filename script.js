@@ -139,13 +139,35 @@ function generateRandomMeal() {
 function updateCartBadge() { document.getElementById('cartBadge').innerText = cartItems.length; }
 
 function addRandomToCart() {
+    // Đọc số người ăn từ ô nhập (mặc định là 4 nếu bỏ trống)
+    const p = parseInt(document.getElementById('randomPortionCount').value) || 4;
+    const multiplier = p / 4;
     let ingList = [];
     const names = currentRandomRecipes.map(r=>r.name).join(' + ');
-    currentRandomRecipes.forEach(r => ingList = ingList.concat(r.ingredients));
-    // Lưu Mâm ngẫu nhiên kèm theo mảng fullRecipes chứa đủ 3 công thức
-    cartItems.push({ id: Date.now(), type: 'random', label: `Mâm ngẫu nhiên (${names})`, ingredients: ingList, fullRecipes: currentRandomRecipes });
+    
+    // Quét qua 3 món và nhân nguyên liệu lên theo số người
+    currentRandomRecipes.forEach(r => {
+        const scaledIngs = r.ingredients.map(ing => {
+            const match = ing.match(/^([\d.]+)(.*)/);
+            if (match && !['ít', 'chút', 'vài'].some(w => ing.toLowerCase().includes(w))) {
+                return +(parseFloat(match[1]) * multiplier).toFixed(1) + match[2];
+            }
+            return ing;
+        });
+        ingList = ingList.concat(scaledIngs);
+    });
+
+    // Lưu lại mâm ngẫu nhiên kèm theo số người ăn (portions)
+    cartItems.push({ 
+        id: Date.now(), 
+        type: 'random', 
+        label: `Mâm ngẫu nhiên (${names}) - ${p} người`, 
+        ingredients: ingList, 
+        fullRecipes: currentRandomRecipes,
+        portions: p // Truyền biến số người ăn vào đây
+    });
     updateCartBadge();
-    alert("✅ Đã đưa Mâm cơm vào Giỏ đi chợ!");
+    alert(`✅ Đã đưa Mâm cơm (${p} người) vào Giỏ đi chợ!`);
 }
 
 function addCurrentRecipeToCart() {
@@ -214,10 +236,9 @@ function goToCookingMode() {
     document.querySelectorAll('.cart-item-checkbox:checked').forEach(cb => {
         const item = cartItems[cb.value];
         if (item.type === 'random') {
-            // Nếu là mâm cơm, tách 3 món ra thành 3 trang riêng biệt
-            item.fullRecipes.forEach(r => cookingList.push({ recipe: r, portions: 4 }));
+            // Đã đổi từ số 4 cứng nhắc thành item.portions động
+            item.fullRecipes.forEach(r => cookingList.push({ recipe: r, portions: item.portions }));
         } else {
-            // Món lẻ
             cookingList.push({ recipe: item.fullRecipe, portions: item.portions });
         }
     });
