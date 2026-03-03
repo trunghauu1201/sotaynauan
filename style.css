@@ -195,4 +195,23 @@ input[type=range]:focus { outline: none; }
 @media (max-width: 600px) {
     .recipe-top-section { flex-direction: column-reverse; }
     .modal-image-container { width: 80%; margin: 0 auto 15px; transform: rotate(1deg); }
+
+}
+
+/* --- Tối ưu hóa giao diện cho Điện thoại (Mobile Responsive) --- */
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 25px 15px; /* Giảm padding hai bên để nới rộng không gian hiển thị */
+        width: 95%; /* Cho khung Modal chiếm gần hết màn hình ngang */
+    }
+    
+    .recipe-top-section { 
+        flex-direction: column-reverse; 
+    }
+    
+    .modal-image-container { 
+        width: 80%; 
+        margin: 0 auto 15px; 
+        transform: rotate(1deg); 
+    }
 }
