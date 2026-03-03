@@ -1,48 +1,49 @@
-body { font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; }
-.container { max-width: 800px; margin: auto; }
-.filters { background: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.filters input, .filters select { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+/* Reset cơ bản */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8fafc; color: #333; line-height: 1.6; }
+
+/* Phần Header (Đây là phần bị mất màu cam nè) */
+.header { background: #ff7043; color: white; padding: 30px 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 30px; }
+.header h1 { font-size: 2.5em; margin-bottom: 10px; }
+.header p { font-size: 1.1em; opacity: 0.9; }
+
+.container { max-width: 1000px; margin: auto; padding: 0 20px 40px; }
+
+/* Khu vực Bộ Lọc */
+.filters { background: white; padding: 20px; border-radius: 12px; margin-bottom: 30px; display: flex; gap: 15px; flex-wrap: wrap; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #eee; }
+.filters input[type="text"], .filters select { padding: 10px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 1em; outline: none; flex: 1; min-width: 200px; }
+.filters input[type="text"]:focus, .filters select:focus { border-color: #ff7043; }
+.filter-time-group { flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 5px; font-weight: 500; }
+
+/* Nâng cấp Thanh trượt (Slider) */
+input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 18px; width: 18px; border-radius: 50%; background: #ff7043; cursor: pointer; margin-top: -6px; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 6px; cursor: pointer; background: #ffe0b2; border-radius: 3px; }
+input[type=range]:focus { outline: none; }
 
 /* Lưới hiển thị món ăn */
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
-.card { background: white; padding: 15px; border-radius: 8px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.2s; }
-.card:hover { transform: translateY(-5px); border-color: #ff9800; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.card { background: white; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; overflow: hidden; border: 1px solid transparent; position: relative; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); border-color: #ff7043; }
 
-/* CSS cho Modal (Popup) */
-.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; backdrop-filter: blur(1px); }
-.modal-content { background: white; width: 50%; margin: 10% auto; padding: 20px; border-radius: 8px; position: relative; }
-.close-btn { position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer; }
+/* Nút thả tim (Đã bỏ z-index để không xuyên thủng Modal) */
+.heart-btn { position: absolute; top: 10px; right: 10px; font-size: 1.5em; background: rgba(255, 255, 255, 0.9); border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: transform 0.2s; user-select: none; }
+.heart-btn:hover { transform: scale(1.2); }
 
-/* CSS cho nút thả tim */
-.card { position: relative; } /* Thêm dòng này hoặc đảm bảo class .card cũ có position: relative */
+/* Hình ảnh thật của món ăn (Bo góc, cắt vừa khung) */
+.card-image { width: 100%; height: 160px; object-fit: cover; display: block; border-bottom: 3px solid #ffe0b2; }
 
-.heart-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5em;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
-    user-select: none; /* Không cho bôi đen text */
-}
+.card-content { padding: 20px; }
+.card-content h3 { margin-bottom: 10px; color: #2c3e50; font-size: 1.3em; }
+.card-content p { color: #666; font-weight: 500; }
 
-.heart-btn:hover {
-    transform: scale(1.2); /* Phóng to nhẹ khi đưa chuột vào */
-}
-
-/* CSS cho hình ảnh thật của món ăn */
-.card-image { 
-    width: 100%; 
-    height: 160px; 
-    object-fit: cover; /* Giúp ảnh không bị méo khi thu phóng */
-    display: block;
-    border-bottom: 3px solid #ffe0b2;
-}
+/* Cải tiến Modal (Hộp thoại chi tiết) */
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; backdrop-filter: blur(2px); }
+.modal-content { background: white; width: 90%; max-width: 600px; margin: 5vh auto; padding: 30px; border-radius: 12px; position: relative; max-height: 90vh; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+.close-btn { position: absolute; top: 15px; right: 20px; font-size: 28px; color: #888; cursor: pointer; transition: color 0.2s; }
+.close-btn:hover { color: #ff7043; }
+#modalTitle { color: #ff7043; font-size: 1.8em; margin-bottom: 15px; border-bottom: 2px solid #ffe0b2; padding-bottom: 10px; }
+.ingredients-box { background: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #ff7043; }
+.instruction-list { margin-left: 20px; padding-left: 10px; }
+.instruction-list li { margin-bottom: 12px; text-align: justify; }
+.instruction-list li::marker { font-weight: bold; color: #ff7043; }

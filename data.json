@@ -1,33 +1,364 @@
 [
-   { 
-        "id": 1, "name": "Bắp cải luộc", "category": "Xào/Luộc", "difficulty": 1, "time": 10, 
-        "image": "https://images.unsplash.com/photo-1598514982205-f36b96d1e8dd?auto=format&fit=crop&w=600&q=80",
-        "ingredients": ["Bắp cải", "Muối", "Nước lọc"], 
-        "instructions": ["Bóc tách từng lá bắp cải, rửa sạch.", "Thái vừa ăn.", "Luộc 5-7 phút.", "Vớt ra đĩa."] 
-    },
-    { 
-        "id": 2, "name": "Cháo tôm thịt băm", "category": "Mặn", "difficulty": 3, "time": 30, 
-        "image": "https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=600&q=80",
-        "ingredients": ["Gạo tẻ", "Tôm tươi", "Thịt heo băm", "Hành ngò"], 
-        "instructions": ["Nấu cháo trắng.", "Xào sơ tôm thịt.", "Trút vào cháo.", "Nêm nếm rắc hành."] 
-    },
-    { 
-        "id": 3, "name": "Dưa leo xào trứng", "category": "Xào/Luộc", "difficulty": 2, "time": 15, 
-        "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
-        "ingredients": ["Dưa leo", "Trứng gà", "Hành lá", "Tỏi"], 
-        "instructions": ["Cắt dưa leo, đánh trứng.", "Xào dưa leo.", "Đổ trứng vào đảo đều.", "Cho hành lá."]
-    },
-    { "id": 3, "name": "Dưa leo xào trứng", "category": "Xào/Luộc", "difficulty": 2, "time": 15, "ingredients": ["Dưa leo", "Trứng gà", "Hành lá", "Tỏi", "Dầu ăn"], "instructions": ["Dưa leo rửa sạch, chẻ đôi, thái lát chéo.", "Đập trứng gà ra bát, đánh tan.", "Phi thơm tỏi, xào nhanh dưa leo.", "Đổ trứng vào chảo, chờ hơi đông rồi đảo đều.", "Cho hành lá vào, tắt bếp."] },
-    { "id": 4, "name": "Thịt heo kho tiêu", "category": "Mặn", "difficulty": 2, "time": 25, "ingredients": ["Thịt ba chỉ", "Tiêu", "Nước mắm", "Đường", "Hành tím", "Tỏi"], "instructions": ["Thịt ba chỉ rửa sạch, thái miếng mỏng.", "Ướp thịt với nước mắm, đường, tiêu, hành tỏi 15 phút.", "Thắng nước màu, cho thịt vào xào săn.", "Thêm nước lọc, kho liu riu cho sệt lại.", "Rắc thêm tiêu xay, dùng nóng."] },
-    { "id": 5, "name": "Canh chua cá lóc", "category": "Canh", "difficulty": 4, "time": 40, "ingredients": ["Cá lóc", "Bạc hà", "Đậu bắp", "Cà chua", "Thơm", "Me vắt", "Rau ngổ"], "instructions": ["Cá lóc làm sạch. Rau củ thái miếng.", "Lấy nước cốt me.", "Nấu sôi nước, cho cá vào nấu chín tới.", "Cho nước me, thơm, cà chua vào, nêm chua ngọt.", "Cho đậu bắp, bạc hà vào đun sôi lại. Rắc rau ngổ."] },
-    { "id": 6, "name": "Rau muống xào tỏi", "category": "Xào/Luộc", "difficulty": 1, "time": 10, "ingredients": ["Rau muống", "Tỏi", "Dầu ăn", "Hạt nêm", "Nước mắm"], "instructions": ["Rau muống nhặt sạch, để ráo.", "Tỏi đập dập.", "Đun nóng dầu, phi thơm tỏi.", "Xào rau muống lửa lớn thật nhanh.", "Nêm gia vị, cho nốt tỏi sống vào đảo đều."] },
-    { "id": 7, "name": "Trứng ốp la rim nước mắm", "category": "Mặn", "difficulty": 1, "time": 10, "ingredients": ["Trứng gà", "Nước mắm", "Đường", "Hành lá", "Dầu ăn", "Tương ớt"], "instructions": ["Pha sốt mắm, đường, tương ớt, nước.", "Chiên trứng ốp la chín tới.", "Đổ hỗn hợp sốt vào chảo.", "Rim nhỏ lửa 1-2 phút.", "Rắc hành lá lên trên."] },
-    { "id": 8, "name": "Canh bí đao thịt băm", "category": "Canh", "difficulty": 2, "time": 20, "ingredients": ["Bí đao", "Thịt heo băm", "Hành lá", "Hạt nêm", "Tiêu"], "instructions": ["Bí đao gọt vỏ, thái lát mỏng.", "Thịt băm ướp gia vị.", "Đun sôi nước, thả từng viên thịt băm vào.", "Cho bí đao vào nấu thêm 3-5 phút.", "Nêm nếm, cho hành lá vào tắt bếp."] },
-    { "id": 9, "name": "Thịt kho tàu", "category": "Mặn", "difficulty": 3, "time": 60, "ingredients": ["Thịt ba chỉ", "Trứng vịt", "Nước dừa", "Nước mắm", "Đường", "Tỏi", "Hành tím"], "instructions": ["Thịt ba chỉ thái miếng vuông, ướp gia vị (hành, tỏi, mắm, đường) trong 30 phút.", "Trứng vịt luộc chín, bóc vỏ.", "Thắng nước màu, cho thịt vào xào săn.", "Đổ nước dừa ngập thịt, đun sôi rồi vớt bọt.", "Cho trứng vào kho cùng ở lửa nhỏ khoảng 40-50 phút đến khi thịt mềm."] },
-    { "id": 10, "name": "Canh rau ngót nấu thịt băm", "category": "Canh", "difficulty": 1, "time": 15, "ingredients": ["Rau ngót", "Thịt heo băm", "Hành khô", "Gia vị", "Nước lọc"], "instructions": ["Rau ngót tuốt lá, rửa sạch, vò hơi nát để nấu canh mềm hơn.", "Phi thơm hành khô, cho thịt băm vào xào săn với chút hạt nêm.", "Đổ nước lượng vừa ăn vào đun sôi, vớt bọt.", "Cho rau ngót vào nấu sôi lại khoảng 3 phút.", "Nêm nếm gia vị vừa miệng rồi tắt bếp."] },
-    { "id": 11, "name": "Gà kho gừng", "category": "Mặn", "difficulty": 2, "time": 30, "ingredients": ["Thịt gà", "Gừng", "Nước mắm", "Đường", "Hạt tiêu", "Hành tím"], "instructions": ["Thịt gà chặt miếng vừa ăn, ướp với hành, nước mắm, tiêu trong 15 phút.", "Gừng cạo vỏ, thái sợi hoặc mỏng.", "Thắng một chút đường tạo màu, cho gà vào xào săn.", "Cho gừng vào đảo đều, thêm chút nước lọc.", "Kho lửa nhỏ khoảng 15 phút cho gà ngấm gia vị và nước cạn sệt."] },
-    { "id": 12, "name": "Đậu hũ sốt cà chua", "category": "Mặn", "difficulty": 1, "time": 20, "ingredients": ["Đậu hũ", "Cà chua", "Hành lá", "Hành khô", "Nước mắm", "Đường"], "instructions": ["Đậu hũ cắt miếng vuông vừa ăn, có thể chiên sơ qua.", "Cà chua rửa sạch, thái hạt lựu.", "Phi thơm hành khô, cho cà chua vào xào nhuyễn cùng chút xíu muối.", "Thêm chút nước lọc, nêm nước mắm, đường cho sốt vừa miệng.", "Cho đậu hũ vào rim lửa nhỏ khoảng 5-7 phút, rắc hành lá rồi tắt bếp."] },
-    { "id": 13, "name": "Sườn xào chua ngọt", "category": "Mặn", "difficulty": 3, "time": 35, "ingredients": ["Sườn non", "Cà chua", "Hành tây", "Tỏi", "Giấm", "Đường", "Nước mắm"], "instructions": ["Sườn chặt miếng vừa ăn, chần qua nước sôi rồi rửa sạch.", "Pha sốt chua ngọt: mắm, đường, giấm, nước lọc tỷ lệ vừa ăn.", "Chiên sườn xém vàng các mặt.", "Phi thơm tỏi, cho cà chua thái lựu và hành tây thái múi cau vào xào.", "Đổ sườn và nước sốt vào rim lửa nhỏ đến khi sốt keo lại bám đều quanh sườn."] },
-    { "id": 14, "name": "Canh khổ qua nhồi thịt", "category": "Canh", "difficulty": 3, "time": 45, "ingredients": ["Khổ qua (mướp đắng)", "Thịt heo băm", "Nấm mèo", "Miến", "Hành lá", "Tiêu"], "instructions": ["Khổ qua cắt khúc, moi bỏ ruột, rửa sạch.", "Nấm mèo, miến ngâm nở, thái nhỏ trộn đều cùng thịt băm, hành lá, tiêu, hạt nêm.", "Nhồi chặt hỗn hợp thịt vào từng khúc khổ qua.", "Đun sôi nước, thả khổ qua nhồi vào đun lửa vừa.", "Nấu khoảng 30 phút cho khổ qua mềm, nêm lại nước canh rồi rắc hành ngò."] },
-    { "id": 15, "name": "Cải thìa xào nấm", "category": "Xào/Luộc", "difficulty": 2, "time": 15, "ingredients": ["Cải thìa", "Nấm đông cô", "Tỏi", "Dầu hào", "Hạt nêm"], "instructions": ["Cải thìa nhặt sạch, cắt đôi hoặc để nguyên bẹ. Nấm đông cô ngâm nở, cắt bỏ chân.", "Chần sơ cải thìa qua nước sôi có pha chút muối rồi vớt ra để ráo.", "Phi thơm tỏi băm, cho nấm vào xào nhanh.", "Cho cải thìa vào chảo, đảo đều ở lửa lớn.", "Nêm dầu hào, hạt nêm cho vừa miệng, xào thêm 1-2 phút rồi tắt bếp."] }
+  {
+    "id": 1, "name": "Thịt heo kho tiêu", "category": "Mặn", "difficulty": 2, "time": 30,
+    "image": "https://i.pinimg.com/736x/e2/d3/c9/e2d3c9363648b7d004d676823c24b5d7.jpg",
+    "ingredients": ["300 gam thịt ba chỉ", "2 muỗng canh nước mắm", "1.5 muỗng canh đường", "2 muỗng cà phê tiêu đen", "2 củ hành tím", "1 củ tỏi", "1 muỗng canh dầu ăn"],
+    "instructions": [
+      "Sơ chế: Hành tỏi bóc vỏ, băm nhuyễn. Thịt ba chỉ rửa sạch với nước muối loãng, khử mùi, sau đó thái miếng vuông hoặc mỏng vừa ăn.",
+      "Ướp thịt: Cho thịt vào tô, trộn đều cùng 1/2 lượng hành tỏi băm, nước mắm, tiêu, hạt nêm. Để ngấm gia vị khoảng 20 phút.",
+      "Thắng nước màu: Bắc nồi (hoặc thố đất) lên bếp, cho 1 muỗng đường và chút dầu ăn, khuấy đều tay đến khi đường chuyển màu cánh gián.",
+      "Xào thịt: Cho phần hành tỏi còn lại vào phi thơm, trút thịt đã ướp vào đảo nhanh tay ở lửa lớn cho thịt săn lại và xém vàng.",
+      "Kho thịt: Đổ khoảng 100ml nước lọc (hoặc nước dừa tươi) vào xăm xắp mặt thịt. Hạ nhỏ lửa, kho liu riu trong 15-20 phút.",
+      "Hoàn thành: Khi nước kho cạn keo lại, quyện vào thịt, bạn rắc thêm nhiều tiêu đen xay lên mặt, thả vài trái ớt rồi tắt bếp."
+    ]
+  },
+  {
+    "id": 2, "name": "Trứng ốp la rim nước mắm", "category": "Mặn", "difficulty": 1, "time": 10,
+    "image": "https://bepxua.vn/wp-content/uploads/2021/03/trung-rim-mam-1024x576.jpg",
+    "ingredients": ["4 quả trứng gà", "3 muỗng canh nước mắm", "2 muỗng canh đường", "1 muỗng canh tương ớt", "2 nhánh hành lá", "1 củ tỏi băm"],
+    "instructions": [
+      "Pha nước sốt: Hòa tan nước mắm, đường, tương ớt, 1 chút tiêu và 2 muỗng nước lọc trong một cái chén nhỏ.",
+      "Chiên trứng: Bắc chảo dầu nóng, đập lần lượt 4 quả trứng vào chiên ốp la. Chiên vừa chín tới (lòng đỏ còn lòng đào) rồi gắp ra đĩa.",
+      "Phi tỏi: Dùng lại chảo đó, phi thơm tỏi băm cho vàng ruộm.",
+      "Rim trứng: Đổ hỗn hợp nước sốt đã pha vào chảo đun sôi cho hơi sệt lại. Thả trứng ốp la vào lại chảo.",
+      "Hoàn thành: Dùng muỗng rưới nước sốt lên mặt trứng trong 1-2 phút cho ngấm. Rắc hành lá cắt nhỏ rồi tắt bếp."
+    ]
+  },
+  {
+    "id": 3, "name": "Thịt kho tàu", "category": "Mặn", "difficulty": 3, "time": 60,
+    "image": "https://i.pinimg.com/1200x/a2/1f/24/a21f24b57a26b5d98a05eac0e4e705fd.jpg",
+    "ingredients": ["500 gam thịt ba chỉ (hoặc thịt đùi)", "4 quả trứng vịt", "1 trái dừa tươi (lấy nước)", "3 muỗng canh nước mắm", "1 củ tỏi lớn", "2 củ hành tím", "2 muỗng canh đường"],
+    "instructions": [
+      "Sơ chế: Thịt rửa sạch với chanh và muối, cắt khúc vuông to (khoảng 4-5cm). Hành, tỏi giã nát vắt lấy nước cốt để ướp thịt giúp nước kho không bị đục.",
+      "Ướp thịt: Ướp thịt với nước cốt hành tỏi, nước mắm, đường, xíu muối trong ít nhất 30 phút.",
+      "Luộc trứng: Trứng vịt luộc chín cứng, bóc sạch vỏ. Có thể chiên sơ qua trứng để vỏ dai ngon hơn.",
+      "Xào thịt: Bắc nồi lên bếp, cho thịt vào xào thật săn lại ở lửa lớn.",
+      "Kho thịt: Đổ nước dừa tươi vào ngập thịt. Khi nước sôi, vớt bọt liên tục để nước trong. Hạ lửa nhỏ nhất, đậy hé vung kho khoảng 40 phút.",
+      "Hoàn thành: Khi thịt bắt đầu mềm, cho trứng vịt vào kho thêm 15-20 phút nữa. Nêm nếm lại vừa ăn rồi tắt bếp."
+    ]
+  },
+  {
+    "id": 4, "name": "Gà kho gừng", "category": "Mặn", "difficulty": 2, "time": 30,
+    "image": "https://tse1.mm.bing.net/th/id/OIP.ZiZlM3mI0RUo9hgPr0WeCAHaEw?pid=Api&h=220&P=0",
+    "ingredients": ["500 gam thịt gà (đùi hoặc cánh)", "1 củ gừng to", "2 muỗng canh nước mắm", "1.5 muỗng canh đường", "1 muỗng cà phê hạt nêm", "2 củ hành khô"],
+    "instructions": [
+      "Sơ chế gà: Gà rửa sạch bằng muối và gừng đập dập để khử mùi tanh. Chặt miếng vừa ăn.",
+      "Sơ chế gừng: Gừng cạo vỏ, một nửa băm nhuyễn, một nửa thái sợi mỏng dài. Hành khô băm nhỏ.",
+      "Ướp gà: Trộn gà với hành băm, gừng băm, nước mắm, hạt nêm, đường và chút tiêu. Ướp trong 20 phút.",
+      "Thắng màu: Bắc nồi, cho 1 muỗng đường và chút dầu ăn vào đun đến khi có màu caramel đẹp mắt.",
+      "Kho gà: Trút thịt gà vào xào săn lại. Khi thịt gà săn và ngấm màu, cho phần gừng thái sợi vào đảo đều. Đổ thêm 1/2 chén nước sôi.",
+      "Hoàn thành: Đun lửa liu riu khoảng 15 phút cho gà chín mềm, nước kho cạn sệt lại, quyện mùi gừng thơm lừng thì tắt bếp."
+    ]
+  },
+  {
+    "id": 5, "name": "Đậu hũ sốt cà chua", "category": "Mặn", "difficulty": 1, "time": 20,
+    "image": "https://cdn.tgdd.vn/2021/05/CookRecipe/GalleryStep/thanh-pham-1052.jpg",
+    "ingredients": ["4 miếng đậu hũ trắng", "3 quả cà chua chín", "2 củ hành tím", "2 nhánh hành lá", "1.5 muỗng canh nước mắm", "1 muỗng cà phê đường"],
+    "instructions": [
+      "Sơ chế: Đậu hũ rửa nhẹ tay, cắt khối vuông nhỏ. Cà chua rửa sạch, băm nhuyễn hoặc thái hạt lựu. Hành lá cắt nhỏ.",
+      "Chiên đậu: Bắc chảo ngập dầu, chiên đậu hũ vàng giòn các mặt rồi vớt ra giấy thấm dầu.",
+      "Làm sốt cà: Dùng chảo khác phi thơm hành tím băm. Cho cà chua vào xào cùng 1 chút xíu muối để cà mau nhừ. Thêm 1/2 chén nước lọc vào đun sôi.",
+      "Nêm nếm sốt: Khi cà chua nhừ tạo thành sốt, nêm nước mắm, đường, bột ngọt cho cân bằng vị chua ngọt.",
+      "Rim đậu: Cho đậu hũ đã chiên vào chảo sốt, đảo nhẹ tay. Đậy vung rim lửa nhỏ khoảng 5 phút cho đậu ngấm nước sốt.",
+      "Hoàn thành: Rắc hành lá và chút tiêu lên trên, tắt bếp và cho ra đĩa."
+    ]
+  },
+  {
+    "id": 6, "name": "Sườn xào chua ngọt", "category": "Mặn", "difficulty": 3, "time": 40,
+    "image": "https://store.longphuong.vn/wp-content/uploads/2022/08/cong-thuc-lam-mon-suon-xao-chua-ngot-huong-vi-dam-da-va-thom-ngon-1564136449zalo_screenshot_26_7_2019_1011159.png",
+    "ingredients": ["500 gam sườn non", "3 muỗng canh giấm táo (hoặc chanh)", "3 muỗng canh đường", "2 muỗng canh nước mắm", "2 muỗng canh tương cà", "1 củ tỏi", "0.5 củ hành tây"],
+    "instructions": [
+      "Sơ chế: Sườn non chặt khúc 3cm. Đun sôi một nồi nước, cho sườn vào chần sơ 3 phút với muối để loại bỏ bọt bẩn, rửa sạch lại và để ráo.",
+      "Chiên sườn: Trộn sườn với một lớp áo bột năng mỏng (nếu thích). Chiên sườn với dầu ăn cho vàng xém các mặt rồi gắp ra.",
+      "Pha sốt: Hòa tan giấm, đường, nước mắm, tương cà và 3 muỗng nước lọc trong một cái chén.",
+      "Xào chua ngọt: Phi thơm tỏi băm. Cho hành tây cắt múi cau vào xào sơ. Đổ hỗn hợp nước sốt vào chảo đun sôi.",
+      "Rim sườn: Trút sườn đã chiên vào chảo sốt. Đảo đều tay trên lửa nhỏ đến khi nước sốt keo lại, bám một lớp bóng bẩy quanh miếng sườn.",
+      "Hoàn thành: Bày ra đĩa, trang trí thêm ngò rí hoặc mè rang."
+    ]
+  },
+  {
+    "id": 7, "name": "Tôm rim thịt ba chỉ", "category": "Mặn", "difficulty": 2, "time": 25,
+    "image": "https://thucthan.com/media/2018/05/tom-rim/cach-lam-tom-rim.jpg",
+    "ingredients": ["250 gam tôm tươi", "250 gam thịt ba chỉ", "2 muỗng canh nước mắm", "1.5 muỗng canh đường", "1 muỗng cà phê tiêu", "2 củ hành tím", "1 củ tỏi"],
+    "instructions": [
+      "Sơ chế: Tôm cắt bỏ râu và đuôi, rửa sạch xóc với xíu muối. Thịt ba chỉ rửa sạch, thái miếng mỏng nhỏ hơn ngón tay.",
+      "Rang tôm: Cho tôm vào chảo rang không dầu đến khi tôm chuyển màu đỏ và cạn nước, múc ra bát rêng.",
+      "Xào thịt: Cho thịt ba chỉ vào chảo đảo đều tay để thịt tự tươm mỡ và hơi xém cạnh. Chắt bớt mỡ lợn ra nếu quá nhiều.",
+      "Rim tôm thịt: Cho hành tỏi băm vào chảo thịt phi thơm. Trút tôm vào đảo chung. Nêm nước mắm, đường, bột ngọt.",
+      "Hoàn thành: Rim ở lửa nhỏ khoảng 5-7 phút cho thịt và tôm săn cứng lại, ngấm màu cánh gián và gia vị đậm đà. Rắc tiêu và hành lá rồi tắt bếp."
+    ]
+  },
+  {
+    "id": 8, "name": "Cá lóc kho tộ", "category": "Mặn", "difficulty": 3, "time": 45,
+    "image": "https://cdn3.ivivu.com/2020/05/ca-loc-kho-ivivu-6.jpg",
+    "ingredients": ["500 gam cá lóc", "100 gam thịt mỡ", "3 muỗng canh nước mắm ngon", "2 muỗng canh đường", "2 quả ớt tươi", "1 muỗng canh tiêu sọ", "1 cây hành lá"],
+    "instructions": [
+      "Sơ chế cá: Cá lóc làm sạch, chà xát với chanh và muối cho hết nhớt. Cắt khoanh dày 2cm. Mỡ cắt hạt lựu.",
+      "Ướp cá: Cho cá vào thố đất, ướp với nước mắm, đường, hạt nêm, hành tỏi băm và một chút tiêu trong 30 phút.",
+      "Làm tóp mỡ: Cho mỡ cắt lựu vào chảo thắng lấy tóp mỡ giòn, chắt bớt nước mỡ ra.",
+      "Kho cá: Đặt thố cá lên bếp đun cho cá săn lại. Thắng 1 muỗng đường làm nước màu rồi đổ vào thố. Châm thêm ít nước sôi ngập 2/3 cá.",
+      "Hoàn thành: Kho liu riu ở lửa nhỏ râm ran khoảng 30 phút. Khi nước mắm kẹo lại, cá cứng mình, cho tóp mỡ, ớt trái và tiêu sọ đập dập lên trên. Tắt bếp dùng nóng."
+    ]
+  },
+  {
+    "id": 9, "name": "Gà chiên nước mắm", "category": "Mặn", "difficulty": 2, "time": 30,
+    "image": "https://i.ytimg.com/vi/YLPvYowfOCM/maxresdefault.jpg",
+    "ingredients": ["500 gam cánh gà", "3 muỗng canh nước mắm", "2 muỗng canh đường", "2 củ tỏi lớn", "1 muỗng canh tương ớt", "2 muỗng canh bột chiên giòn"],
+    "instructions": [
+      "Sơ chế: Cánh gà rửa sạch, chặt làm đôi. Khứa nhẹ vài đường trên da để dễ ngấm gia vị và nhanh chín.",
+      "Áo bột: Xóc cánh gà với một lớp mỏng bột chiên giòn để khi chiên gà giòn và không bị văng dầu.",
+      "Chiên gà: Chiên ngập dầu cánh gà ở lửa vừa cho đến khi chín vàng ruộm vớt ra để ráo dầu.",
+      "Làm sốt: Tỏi băm thật nhỏ. Pha hỗn hợp: 3 mắm, 2 đường, 1 tương ớt, 1 muỗng nước.",
+      "Ngào sốt: Phi thơm tỏi với chút dầu. Đổ nước sốt vào chảo khuấy đều cho sôi bọt. Trút cánh gà chiên vào đảo nhanh tay để sốt bám áo đều quanh miếng gà. Tắt bếp."
+    ]
+  },
+  {
+    "id": 10, "name": "Trứng đúc thịt băm", "category": "Mặn", "difficulty": 1, "time": 15,
+    "image": "https://i.ytimg.com/vi/3_hwleyZPb4/maxresdefault.jpg",
+    "ingredients": ["4 quả trứng gà", "150 gam thịt heo băm", "2 nhánh hành lá", "1 củ hành tím", "1 muỗng cà phê nước mắm", "0.5 muỗng cà phê hạt tiêu"],
+    "instructions": [
+      "Chuẩn bị: Hành tím băm nhuyễn, hành lá cắt nhỏ gọn.",
+      "Trộn hỗn hợp: Cho thịt băm, trứng đập vỏ, hành tím, hành lá vào một tô lớn. Nêm nước mắm, hạt tiêu, hạt nêm.",
+      "Đánh trứng: Dùng đũa hoặc phới đánh tan hỗn hợp trứng thịt cho thật đều và hòa quyện vào nhau.",
+      "Chiên trứng: Làm nóng chảo với 2 muỗng dầu ăn. Đổ hỗn hợp trứng vào dàn đều ra lòng chảo.",
+      "Hoàn thành: Chiên lửa nhỏ vừa, đậy hé nắp cho thịt bên trong chín tới. Khi mặt dưới vàng xém, cẩn thận lật mặt trứng chiên nốt mặt còn lại. Lấy ra cắt miếng tam giác."
+    ]
+  },
+  {
+    "id": 11, "name": "Bắp cải luộc", "category": "Xào/Luộc", "difficulty": 1, "time": 10,
+    "image": "https://img-global.cpcdn.com/recipes/1b305a545f4eb988/1200x630cq70/photo.jpg",
+    "ingredients": ["500 gam bắp cải trắng", "1 muỗng cà phê muối", "1 nhánh gừng đập dập", "1 lít nước lọc"],
+    "instructions": [
+      "Sơ chế: Bắp cải bóc bỏ lá già bên ngoài, thái miếng vuông hoặc múi cau mỏng tùy thích. Rửa sạch qua nhiều lần nước.",
+      "Chuẩn bị nước luộc: Đun sôi 1 lít nước trong nồi lớn. Khi nước sôi bùng, cho muối và gừng đập dập vào.",
+      "Luộc rau: Thả bắp cải vào nồi, dùng đũa ấn chìm xuống nước.",
+      "Hoàn thành: Luộc khoảng 5-7 phút tùy độ giòn mong muốn. Vớt ra đĩa cho ráo nước. Ngon nhất khi chấm cùng trứng luộc dầm nước mắm."
+    ]
+  },
+  {
+    "id": 12, "name": "Dưa leo xào trứng", "category": "Xào/Luộc", "difficulty": 1, "time": 10,
+    "image": "https://cdn-www.vinid.net/e5554481-cach-lam-dua-leo-xao-thit-4.jpg",
+    "ingredients": ["2 quả dưa leo", "2 quả trứng gà", "1 củ tỏi", "1 nhánh hành lá", "1 muỗng cà phê dầu hào"],
+    "instructions": [
+      "Sơ chế: Dưa leo rửa sạch, chẻ đôi dọc theo quả, cạo bỏ bớt phần ruột để xào không bị ra nước. Thái lát xéo mỏng. Hành lá thái khúc.",
+      "Chuẩn bị trứng: Đập trứng ra bát, nêm xíu nước mắm, đánh tan đều.",
+      "Phi tỏi: Bắc chảo lên bếp, cho dầu ăn và tỏi băm vào phi thơm.",
+      "Xào dưa: Cho dưa leo vào xào thật nhanh tay trên lửa lớn, nêm dầu hào và hạt nêm.",
+      "Xào trứng: Khi dưa vừa chuyển màu hơi trong, chừa một góc chảo đổ trứng vào. Đợi trứng hơi se lại thì đảo đều trứng cùng dưa leo. Rắc hành lá, tắt bếp ngay để dưa giữ độ giòn."
+    ]
+  },
+  {
+    "id": 13, "name": "Rau muống xào tỏi", "category": "Xào/Luộc", "difficulty": 1, "time": 10,
+    "image": "https://beptruong.edu.vn/wp-content/uploads/2021/04/rau-muong-xao-toi-1.jpg",
+    "ingredients": ["1 bó rau muống", "1.5 củ tỏi", "2 muỗng canh dầu ăn", "1 muỗng cà phê hạt nêm", "1 muỗng cà phê nước mắm"],
+    "instructions": [
+      "Sơ chế: Rau muống nhặt lấy phần đọt non, bỏ bớt lá già, cắt khúc vừa ăn. Rửa sạch và để THẬT RÁO NƯỚC.",
+      "Chuẩn bị tỏi: Tỏi bóc vỏ, dùng dao đập dập (không băm nhuyễn để xào không bị cháy khét).",
+      "Phi tỏi: Làm nóng chảo thật kỹ, cho lượng dầu ăn dư dả một chút, phi thơm 2/3 lượng tỏi.",
+      "Xào rau: Vặn lửa LỚN NHẤT, cho rau muống vào xào đảo liên tục. Nêm hạt nêm, xíu nước mắm.",
+      "Hoàn thành: Xào khoảng 3 phút là rau chín, giữ được màu xanh mướt. Cho 1/3 lượng tỏi sống đập dập còn lại vào đảo đều rồi tắt bếp, trút ra đĩa."
+    ]
+  },
+  {
+    "id": 14, "name": "Cải thìa xào nấm", "category": "Xào/Luộc", "difficulty": 2, "time": 15,
+    "image": "https://bepmina.vn/wp-content/uploads/2021/08/rau-cai-thia-xao-nam-dong-co-1024x683.jpeg",
+    "ingredients": ["300 gam cải thìa", "150 gam nấm đông cô", "2 muỗng canh dầu hào", "1 củ tỏi", "1 muỗng cà phê hạt nêm"],
+    "instructions": [
+      "Sơ chế nấm: Nấm đông cô cắt bỏ chân, ngâm rửa sạch nước muối, khứa chữ thập trên mũ nấm cho đẹp mắt.",
+      "Sơ chế rau: Cải thìa nhặt sạch, chẻ đôi theo chiều dọc. Đun sôi nước, chần sơ cải thìa khoảng 1 phút rồi vớt ra ngâm nước đá.",
+      "Làm sốt xào: Hòa tan dầu hào, hạt nêm, xíu đường với 2 muỗng nước lọc.",
+      "Xào nấm: Phi thơm tỏi băm, cho nấm đông cô vào xào chín tới.",
+      "Hoàn thành: Trút cải thìa đã chần vào chảo nấm, đổ chén nước sốt vào xào nhanh tay ở lửa lớn khoảng 2 phút cho ngấm gia vị rồi tắt bếp."
+    ]
+  },
+  {
+    "id": 15, "name": "Đậu cove xào thịt bò", "category": "Xào/Luộc", "difficulty": 2, "time": 15,
+    "image": "https://khonggianxua.com.vn/wp-content/uploads/2024/05/thanh-pham-1009.jpg",
+    "ingredients": ["300 gam đậu cove", "150 gam thịt bò mềm", "1 củ tỏi", "1 muỗng canh dầu hào", "1 muỗng cà phê tiêu", "1 muỗng canh dầu ăn"],
+    "instructions": [
+      "Sơ chế thịt bò: Thịt bò thái lát mỏng ngang thớ. Ướp với dầu hào, tỏi băm, xíu tiêu và 1 chút dầu ăn trong 15 phút.",
+      "Sơ chế đậu cove: Đậu tước bỏ xơ hai bên hông, rửa sạch, thái vát xéo.",
+      "Xào bò: Bắc chảo lửa LỚN, xào thật nhanh thịt bò vừa chín tái (khoảng 1 phút) rồi trút ra đĩa riêng.",
+      "Xào đậu: Thêm chút dầu vào chảo, cho đậu cove vào xào chín. Có thể châm thêm 2 muỗng nước lọc để đậu chín mềm từ bên trong.",
+      "Hoàn thành: Khi đậu đã chín, trút thịt bò vào lại chảo đảo đều 30 giây. Nêm nếm vừa ăn, rắc tiêu và tắt bếp."
+    ]
+  },
+  {
+    "id": 16, "name": "Nấm đùi gà xào bơ tỏi", "category": "Xào/Luộc", "difficulty": 1, "time": 10,
+    "image": "https://i.ytimg.com/vi/WVunNP90Bec/maxresdefault.jpg",
+    "ingredients": ["300 gam nấm đùi gà", "2 muỗng canh bơ thực vật", "2 củ tỏi băm", "1 muỗng cà phê nước mắm", "1 nhánh hành lá", "1 muỗng cà phê tiêu"],
+    "instructions": [
+      "Sơ chế: Nấm đùi gà cắt bỏ phần gốc già, rửa sạch, thái lát mỏng dọc theo thân nấm. Hành lá thái nhỏ.",
+      "Phi bơ tỏi: Đun chảy bơ trên chảo, cho tỏi băm vào phi thơm nức mũi.",
+      "Xào nấm: Cho nấm đùi gà vào xào nhanh tay. Nấm sẽ tiết ra một chút nước, tiếp tục xào lửa LỚN cho cạn nước.",
+      "Nêm nếm: Thêm nước mắm, xíu hạt nêm và tiêu vào xào đều tay.",
+      "Hoàn thành: Xào khoảng 5 phút đến khi nấm chín mềm, rắc hành lá và tắt bếp."
+    ]
+  },
+  {
+    "id": 17, "name": "Mướp xào giá đỗ", "category": "Xào/Luộc", "difficulty": 1, "time": 10,
+    "image": "https://giadinh.mediacdn.vn/296230595582509056/2021/9/23/photo-1-16324038937501686112096.jpg",
+    "ingredients": ["2 quả mướp hương", "200 gam giá đỗ tươi", "1 củ hành tím", "1 nhánh hành lá", "1 muỗng cà phê hạt nêm"],
+    "instructions": [
+      "Sơ chế: Mướp gọt vỏ, thái lát xéo vừa ăn. Giá đỗ nhặt bỏ rễ cặn, rửa sạch để ráo.",
+      "Phi hành: Hành tím thái mỏng, phi thơm với dầu ăn trên chảo nóng.",
+      "Xào mướp: Cho mướp vào xào trước, đảo đều khoảng 2-3 phút cho mướp vừa chín tới và tươm nước trong.",
+      "Xào giá: Trút giá đỗ vào xào cùng. Nêm hạt nêm, bột ngọt cho vừa miệng.",
+      "Hoàn thành: Giá đỗ xào rất nhanh chín (khoảng 1 phút). Rắc hành lá rồi tắt bếp ngay để giá và mướp không bị nhũn."
+    ]
+  },
+  {
+    "id": 18, "name": "Cà tím xào thịt băm", "category": "Xào/Luộc", "difficulty": 2, "time": 20,
+    "image": "https://i.ytimg.com/vi/OepruvHIWkw/maxresdefault.jpg",
+    "ingredients": ["2 quả cà tím dài", "150 gam thịt heo băm", "1 củ tỏi", "1 nhánh hành lá, tía tô", "2 muỗng canh dầu hào", "1 muỗng canh tương ớt"],
+    "instructions": [
+      "Sơ chế: Cà tím bổ dọc, cắt khúc. Ngâm ngay vào âu nước muối loãng 10 phút để cà không bị thâm đen, sau đó vớt ra vắt nhẹ cho ráo nước.",
+      "Xào thịt: Phi thơm tỏi, cho thịt băm vào xào tơi và săn lại.",
+      "Xào cà: Cho cà tím vào chảo đảo đều với thịt. Thêm 1/2 chén nước lọc vào đậy nắp đun khoảng 5 phút cho cà chín mềm.",
+      "Nêm gia vị: Mở nắp, nêm dầu hào, tương ớt, hạt nêm, xíu đường đảo đều tay.",
+      "Hoàn thành: Cà chín mềm nhừ ngấm gia vị, rắc hành lá và tía tô (nếu có) thái nhỏ vào rồi tắt bếp."
+    ]
+  },
+  {
+    "id": 19, "name": "Mực xào dưa leo cà chua", "category": "Xào/Luộc", "difficulty": 2, "time": 15,
+    "image": "https://i.ytimg.com/vi/IoHM24t8KEQ/maxresdefault.jpg",
+    "ingredients": ["300 gam mực ống tươi", "1 quả dưa leo", "1 quả cà chua", "0.5 củ hành tây", "1 nhánh cần tây", "1 củ tỏi", "1 muỗng cà phê tiêu"],
+    "instructions": [
+      "Sơ chế mực: Mực làm sạch, khứa vẩy rồng đẹp mắt, thái miếng vừa ăn. Chần sơ mực qua nước sôi có gừng rồi vớt ra ngâm đá cho giòn.",
+      "Sơ chế rau: Dưa leo thái xéo, cà chua thái múi cau, hành tây thái múi cau mỏng. Cần tây cắt khúc.",
+      "Xào mực: Phi thơm tỏi, xào mực nhanh tay lửa thật lớn, nêm chút hạt nêm, đổ ra đĩa riêng.",
+      "Xào rau: Thêm dầu vào chảo, xào dưa leo, cà chua, hành tây. Nêm dầu hào.",
+      "Hoàn thành: Khi rau củ vừa chín tới, đổ đĩa mực vào đảo chung. Cho cần tây và rắc tiêu, xào thêm 1 phút rồi tắt bếp."
+    ]
+  },
+  {
+    "id": 20, "name": "Rau lang xào tỏi", "category": "Xào/Luộc", "difficulty": 1, "time": 10,
+    "image": "https://img-global.cpcdn.com/recipes/860ecf36b02c3cd2/1200x630cq70/photo.jpg",
+    "ingredients": ["1 bó rau lang", "1.5 củ tỏi", "2 muỗng canh dầu ăn", "1 muỗng cà phê hạt nêm", "1 muỗng cà phê nước mắm"],
+    "instructions": [
+      "Sơ chế: Nhặt đọt non và lá non của rau lang, rửa sạch để ráo nước. (Nên vò nhẹ lá rau lang lúc rửa để khi xào rau mềm và thấm gia vị hơn).",
+      "Luộc sơ (Mẹo): Đun nước sôi chần sơ rau lang 30 giây rồi vớt ra ngâm nước lạnh. Bước này giúp rau không bị chát và đen khi xào.",
+      "Phi tỏi: Tỏi đập dập, phi thơm với dầu ăn trên chảo.",
+      "Xào rau: Cho rau lang vào xào lửa lớn, đảo nhanh tay. Nêm hạt nêm và nước mắm.",
+      "Hoàn thành: Rau lang rất nhanh chín, xào khoảng 2 phút là chín mềm. Tắt bếp và trút ra đĩa."
+    ]
+  },
+  {
+    "id": 21, "name": "Canh chua cá lóc", "category": "Canh", "difficulty": 3, "time": 30,
+    "image": "https://file.hstatic.net/1000394081/file/canh-chua-ca-loc-thom-ngon_bdcc7d49d9b6464d810a1cde9a3a5935.jpg",
+    "ingredients": ["300 gam cá lóc", "1 vắt me chua", "100 gam bạc hà", "100 gam đậu bắp", "1 quả cà chua", "0.25 quả dứa (thơm)", "1 ít rau ngổ"],
+    "instructions": [
+      "Sơ chế nguyên liệu: Cá lóc làm sạch, xắt lát. Dứa, cà chua, bạc hà, đậu bắp thái lát xéo. Lấy vắt me ngâm nước nóng lọc lấy nửa chén nước cốt me.",
+      "Nấu nước dùng: Đun sôi 1 lít nước, cho cá lóc vào luộc chín, vớt bọt cho nước trong.",
+      "Nấu canh: Cho nước me, dứa, cà chua vào nồi đun sôi. Nêm gia vị gồm đường, mắm, muối sao cho vị chua ngọt hài hòa.",
+      "Cho rau củ: Cuối cùng thả đậu bắp, bạc hà, giá đỗ vào đun sôi bùng lên khoảng 2 phút.",
+      "Hoàn thành: Tắt bếp, múc ra tô, rắc ngò gai, rau ngổ cắt nhỏ lên trên. Có thể thêm tỏi phi để tăng mùi thơm."
+    ]
+  },
+  {
+    "id": 22, "name": "Canh bí đao nấu thịt băm", "category": "Canh", "difficulty": 1, "time": 15,
+    "image": "https://cdn2.fptshop.com.vn/unsafe/Uploads/images/tin-tuc/169484/Originals/canh-bi-dao-3.jpg",
+    "ingredients": ["400 gam bí đao", "150 gam thịt heo băm", "2 nhánh hành lá", "1 ít ngò rí", "1 muỗng cà phê hạt nêm", "1 muỗng cà phê tiêu"],
+    "instructions": [
+      "Sơ chế: Bí đao gọt vỏ, bỏ ruột, thái lát mỏng hoặc băm sợi tùy thích. Hành ngò xắt nhỏ.",
+      "Ướp thịt: Trộn thịt băm với đầu hành lá băm, hạt nêm, tiêu trong 10 phút.",
+      "Nấu thịt: Đun sôi 1 lít nước, dùng muỗng xắn từng viên thịt băm thả vào nồi. Nấu sôi khoảng 3 phút cho nước ngọt, vớt bọt.",
+      "Nấu bí: Thả bí đao vào nồi, nấu thêm khoảng 3-5 phút đến khi bí chuyển màu trong, chín mềm.",
+      "Hoàn thành: Nêm nếm lại gia vị cho thanh mát. Tắt bếp, rắc hành ngò lên trên."
+    ]
+  },
+  {
+    "id": 23, "name": "Canh rau ngót thịt băm", "category": "Canh", "difficulty": 1, "time": 15,
+    "image": "https://giadinh.mediacdn.vn/296230595582509056/2025/6/26/avatar1750930058709-1750930059157961942890.png",
+    "ingredients": ["1 bó rau ngót", "100 gam thịt heo băm", "1 củ hành khô", "1 muỗng cà phê hạt nêm", "1 muỗng canh dầu ăn"],
+    "instructions": [
+      "Sơ chế: Tuốt lá rau ngót, bỏ cọng cứng. Rửa sạch và dùng tay vò hơi nát lá rau (bí quyết để nước canh ngọt và lá rau mềm hơn).",
+      "Xào thịt: Phi thơm hành khô, cho thịt băm vào xào nhanh tay với chút gia vị cho săn lại.",
+      "Nấu canh: Đổ lượng nước lọc vừa đủ dùng vào nồi thịt, đun sôi. Chú ý vớt bọt.",
+      "Thả rau: Cho rau ngót đã vò nát vào nồi. Nấu sôi lửa lớn khoảng 5 phút cho rau chín nhừ.",
+      "Hoàn thành: Nêm nếm lại bột ngọt, hạt nêm cho vừa miệng rồi múc ra tô."
+    ]
+  },
+  {
+    "id": 24, "name": "Canh khổ qua nhồi thịt", "category": "Canh", "difficulty": 3, "time": 45,
+    "image": "https://www.btaskee.com/wp-content/uploads/2021/12/canh-kho-qua-nhoi-thit-thom-ngon-bo-duong.jpg",
+    "ingredients": ["3 quả khổ qua", "200 gam thịt heo băm", "20 gam nấm mèo", "20 gam miến", "1 củ hành tím", "1 nhánh hành lá", "1 lít nước dùng"],
+    "instructions": [
+      "Sơ chế khổ qua: Cắt bỏ 2 đầu, dùng muỗng moi sạch ruột và lớp màng trắng bên trong, rửa sạch, cắt làm đôi.",
+      "Làm nhân: Nấm mèo, miến ngâm nở mềm, băm nhỏ. Trộn đều thịt băm, nấm, miến, hành tím băm, hành lá, tiêu, hạt nêm.",
+      "Nhồi thịt: Nhồi thật chặt hỗn hợp nhân vào từng khoanh khổ qua. Dùng thìa miết phẳng 2 mặt.",
+      "Nấu canh: Đun sôi nước dùng, thả nhẹ nhàng khổ qua vào. Nấu trên lửa vừa, không đậy nắp (để giữ màu xanh).",
+      "Hoàn thành: Nấu khoảng 30-40 phút cho khổ qua mềm rục. Thêm hành lá, xíu nước mắm cho thơm rồi tắt bếp."
+    ]
+  },
+  {
+    "id": 25, "name": "Canh mồng tơi riêu cua", "category": "Canh", "difficulty": 3, "time": 25,
+    "image": "https://khonggianxuahue.com.vn/wp-content/uploads/2024/05/canh-cua-rau-day-mong-toi-thumbnail11-1200x676-1.jpg",
+    "ingredients": ["300 gam cua đồng xay", "1 bó rau mồng tơi", "1 bó nhỏ rau đay", "1 quả mướp hương", "1 muỗng cà phê muối", "1 củ hành tím"],
+    "instructions": [
+      "Sơ chế: Lọc thịt cua đồng qua rây lưới với nước lọc, bỏ bã. Rau mồng tơi, rau đay thái nhỏ. Mướp thái lát xéo.",
+      "Đóng gạch cua: Cho nồi nước cua lên bếp, nêm xíu muối, đun lửa VỪA. Dùng đũa khuấy nhẹ 1 chiều đến khi thịt cua bắt đầu nổi lên thành tảng thì ngưng khuấy.",
+      "Thêm rau: Khi gạch cua nổi hoàn toàn và nước sôi bùng, cẩn thận gạt gạch cua sang một bên, thả mướp và rau vào phần nước.",
+      "Hoàn thành: Rau rất nhanh chín, chỉ cần đun sôi lại 1-2 phút. Nêm nếm bột ngọt vừa ăn, tắt bếp múc ra bát thật khéo để mảng cua không bị vỡ."
+    ]
+  },
+  {
+    "id": 26, "name": "Canh nghêu nấu dứa", "category": "Canh", "difficulty": 2, "time": 20,
+    "image": "https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/trangiang/canhngheu/ngheunauchua.png",
+    "ingredients": ["1 kg nghêu (ngao)", "0.5 quả dứa (thơm)", "2 quả cà chua", "1 ít rau răm, hành lá", "1 củ hành khô", "1 muỗng canh nước mắm"],
+    "instructions": [
+      "Sơ chế nghêu: Ngâm nghêu với ớt cắt lát trong 1-2 tiếng cho nhả sạch cát. Luộc nghêu với ít nước đến khi há miệng. Vớt thịt nghêu ra, chắt lấy phần nước luộc nghêu trong, bỏ cặn.",
+      "Sơ chế phụ: Dứa thái miếng mỏng, cà chua thái múi cau. Rau răm, hành lá thái nhỏ.",
+      "Xào cà chua: Phi thơm hành khô, xào cà chua cho mềm, cho dứa vào đảo cùng.",
+      "Nấu canh: Đổ nước luộc nghêu vào nồi đun sôi. Thả phần thịt nghêu vào nấu thêm 1-2 phút. Nêm nếm lại vì nghêu đã có vị mặn sẵn.",
+      "Hoàn thành: Thêm hành lá, rau răm vào nồi đảo đều rồi tắt bếp ngay."
+    ]
+  },
+  {
+    "id": 27, "name": "Canh cải bẹ xanh nấu gừng", "category": "Canh", "difficulty": 1, "time": 15,
+    "image": "https://cdn.tgdd.vn/Files/2022/06/03/1436833/cach-chon-cai-be-xanh-an-toan-tuoi-ngon-202206040728159270.jpg",
+    "ingredients": ["1 bó cải bẹ xanh", "1 nhánh gừng tươi", "1 muỗng cà phê hạt nêm", "1 muỗng canh dầu ăn"],
+    "instructions": [
+      "Sơ chế: Cải bẹ xanh nhặt sạch, cắt khúc dài 3cm, rửa kỹ. Gừng gọt vỏ, thái chỉ mỏng.",
+      "Nấu nước dùng: Đun sôi khoảng 1 lít nước lọc. Cho gừng thái chỉ và 1 muỗng hạt nêm, xíu muối vào nồi.",
+      "Nấu canh: Đợi nước sôi già, cho rau cải bẹ xanh vào nồi, thêm muỗng dầu ăn giúp rau bóng và xanh.",
+      "Hoàn thành: Cải bẹ xanh không nên nấu quá rục. Đun khoảng 3-4 phút, nêm nếm lại vừa miệng rồi tắt bếp. Vị đắng nhẹ của cải kết hợp hơi cay ấm của gừng cực kỳ đưa cơm."
+    ]
+  },
+  {
+    "id": 28, "name": "Canh gà lá giang", "category": "Canh", "difficulty": 2, "time": 30,
+    "image": "https://thucthan.com/media/2019/08/canh-ga/canh-ga-la-giang.jpg",
+    "ingredients": ["400 gam thịt gà", "1 bó lá giang", "1 củ tỏi", "1 quả ớt", "2 nhánh ngò gai", "2 muỗng canh nước mắm"],
+    "instructions": [
+      "Sơ chế: Gà chặt miếng vừa ăn, ướp với chút mắm, tiêu, hạt nêm. Lá giang nhặt sạch, RỬA XONG VÒ NÁT LÁ.",
+      "Xào thịt gà: Phi thơm tỏi băm, cho thịt gà vào xào săn lại cho chín bề mặt.",
+      "Nấu canh: Châm nước lọc vào nồi gà đun sôi, vớt bọt kỹ. Nấu lửa nhỏ khoảng 15 phút cho gà mềm và ra nước ngọt.",
+      "Thêm lá giang: Cho lá giang đã vò vào nồi, đun thêm 3-5 phút. Nêm nếm gia vị, cho thêm đường để cân bằng vị chua gắt.",
+      "Hoàn thành: Tắt bếp, cắt ngò gai và vài lát ớt thả vào để tô canh thêm dậy mùi thơm."
+    ]
+  },
+  {
+    "id": 29, "name": "Canh sườn hầm củ quả", "category": "Canh", "difficulty": 2, "time": 40,
+    "image": "https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/canh_suon_non_5ab3630f34.jpg",
+    "ingredients": ["300 gam sườn non", "1 củ khoai tây", "1 củ cà rốt", "1 quả su su non", "1 nhánh hành lá", "1 muỗng cà phê muối"],
+    "instructions": [
+      "Sơ chế sườn: Sườn chặt miếng, luộc chần sơ qua nước sôi để đẩy bọt bẩn ra ngoài, rửa sạch lại.",
+      "Hầm sườn: Cho sườn vào nồi với 1.2 lít nước lạnh. Đun sôi, hạ lửa nhỏ hầm khoảng 25-30 phút cho sườn mềm và tiết chất ngọt.",
+      "Sơ chế rau củ: Khoai tây, cà rốt, su su gọt vỏ, cắt khối vuông hoặc tỉa hoa cho đẹp.",
+      "Nấu củ quả: Cho cà rốt vào hầm trước 5 phút. Sau đó cho khoai tây và su su vào hầm chung thêm 10 phút.",
+      "Hoàn thành: Dùng đũa xiên thử thấy củ quả mềm thì nêm nếm gia vị vừa ăn. Múc ra tô, rắc hành ngò lên trên."
+    ]
+  },
+  {
+    "id": 30, "name": "Canh hẹ đậu hũ non", "category": "Canh", "difficulty": 1, "time": 10,
+    "image": "https://digifood.vn/blog/wp-content/uploads/2022/04/canh-dau-hu-non-9.jpg",
+    "ingredients": ["1 bó hẹ tươi", "1 hộp đậu hũ non", "100 gam thịt băm", "1 củ hành tím", "1 muỗng cà phê hạt nêm"],
+    "instructions": [
+      "Sơ chế: Hẹ rửa sạch, cắt khúc dài 3cm. Đậu hũ non cẩn thận cắt khối vuông nhỏ để không bị nát.",
+      "Xào thịt: Phi thơm hành tím, xào nhanh thịt băm cho săn lại.",
+      "Nấu nước dùng: Đổ nước sôi vào nồi thịt, nêm nếm gia vị vừa miệng.",
+      "Nấu canh: Thả đậu hũ non vào nồi đun sôi nhẹ trở lại (không khuấy mạnh tay).",
+      "Hoàn thành: Cuối cùng thả hẹ vào, đảo nhẹ 1 vòng và TẮT BẾP NGAY. Múc ra bát dùng nóng."
+    ]
+  }
 ]

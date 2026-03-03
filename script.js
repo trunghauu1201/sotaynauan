@@ -105,15 +105,47 @@ function toggleFavorite(event, recipeId) {
 }
 
 // 7. Hàm điều khiển Modal
+let currentRecipe = null;
 function openModal(recipe) {
+    currentRecipe = recipe;
     document.getElementById('modalTitle').innerText = recipe.name;
-    document.getElementById('modalIngredients').innerText = recipe.ingredients.join(', ');
+    
+    // Mặc định luôn hiện khẩu phần cho 4 người (chuẩn mâm cơm gia đình)
+    document.getElementById('portionCount').value = 4;
+    renderIngredients(4);
     
     const stepsHTML = recipe.instructions.map(step => `<li>${step}</li>`).join('');
     document.getElementById('modalInstructions').innerHTML = `<ol class="instruction-list">${stepsHTML}</ol>`;
     
     document.getElementById('recipeModal').style.display = 'block';
 }
+// Hàm mới: Tính toán và render nguyên liệu theo số người
+function renderIngredients(portions) {
+    if (!currentRecipe) return;
+    
+    // Công thức gốc trong data.json đang được thiết kế cho 4 người ăn
+    const multiplier = portions / 4; 
+    
+    const ingredientsHTML = currentRecipe.ingredients.map(ing => {
+        // Thuật toán tìm con số ở đầu chuỗi (VD: "300g thịt" -> tìm ra số 300)
+        const match = ing.match(/^([\d.]+)/); 
+        if (match) {
+            const baseNum = parseFloat(match[1]);
+            const newNum = +(baseNum * multiplier).toFixed(1); // Nhân lên và làm tròn
+            return "✔️ " + ing.replace(/^([\d.]+)/, newNum); // Thay số mới vào
+        }
+        return "✔️ " + ing; // Nếu không có số (VD: "Tiêu, gia vị") thì giữ nguyên
+    }).join('<br>');
+    
+    document.getElementById('modalIngredients').innerHTML = ingredientsHTML;
+}
+// Thêm sự kiện: Khi người dùng bấm tăng/giảm số người, gọi lại hàm tính toán
+document.getElementById('portionCount').addEventListener('input', (e) => {
+    let val = parseInt(e.target.value);
+    if (val > 0 && val <= 20) {
+        renderIngredients(val);
+    }
+});
 
 function closeModal() {
     document.getElementById('recipeModal').style.display = 'none';
@@ -154,4 +186,13 @@ function generateRandomMeal() {
     canhEl.onclick = () => openModal(canhPick);
     manEl.onclick = () => openModal(manPick);
     xaoEl.onclick = () => openModal(xaoPick);
+}
+
+// 10. Đóng Modal khi click ra ngoài vùng nền tối
+window.onclick = function(event) {
+    const modal = document.getElementById('recipeModal');
+    // Nếu nơi click chuột chính là cái nền đen của modal (không phải bên trong khung trắng)
+    if (event.target === modal) {
+        closeModal(); // Thì gọi hàm đóng hộp thoại
+    }
 }
