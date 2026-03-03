@@ -119,22 +119,34 @@ function openModal(recipe) {
     
     document.getElementById('recipeModal').style.display = 'block';
 }
-// Hàm mới: Tính toán và render nguyên liệu theo số người
+
+// Hàm tính toán và render nguyên liệu theo số người (Đã fix lỗi "1 ít")
 function renderIngredients(portions) {
     if (!currentRecipe) return;
     
-    // Công thức gốc trong data.json đang được thiết kế cho 4 người ăn
+    // Công thức gốc đang được thiết kế cho 4 người ăn
     const multiplier = portions / 4; 
     
     const ingredientsHTML = currentRecipe.ingredients.map(ing => {
-        // Thuật toán tìm con số ở đầu chuỗi (VD: "300g thịt" -> tìm ra số 300)
+        // Dạy máy tính nhận biết các từ không được phép nhân lên
+        const ignoreWords = ['ít', 'chút', 'vài'];
+        const shouldIgnore = ignoreWords.some(word => ing.toLowerCase().includes(word));
+        
+        // Nếu có chứa từ cấm kỵ, trả về nguyên bản
+        if (shouldIgnore) {
+            return "✔️ " + ing; 
+        }
+
+        // Thuật toán tìm con số ở đầu chuỗi (VD: "300g thịt" -> 300)
         const match = ing.match(/^([\d.]+)/); 
         if (match) {
             const baseNum = parseFloat(match[1]);
-            const newNum = +(baseNum * multiplier).toFixed(1); // Nhân lên và làm tròn
+            const newNum = +(baseNum * multiplier).toFixed(1); // Nhân lên và làm tròn 1 chữ số
             return "✔️ " + ing.replace(/^([\d.]+)/, newNum); // Thay số mới vào
         }
-        return "✔️ " + ing; // Nếu không có số (VD: "Tiêu, gia vị") thì giữ nguyên
+        
+        // Nếu không có số ở đầu thì giữ nguyên
+        return "✔️ " + ing; 
     }).join('<br>');
     
     document.getElementById('modalIngredients').innerHTML = ingredientsHTML;
