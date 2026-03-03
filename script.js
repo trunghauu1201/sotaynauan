@@ -200,22 +200,23 @@ function openCartModal() {
         let rHTML = '', sHTML = '';
         cartItems.forEach((item, index) => {
             const row = `
-                <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px dashed #f4f1ea;">
-                    <div style="display: flex; align-items: flex-start; gap: 10px; flex: 1;">
-                        <input type="checkbox" class="cart-item-checkbox" value="${index}" onchange="checkCartSelection()" style="width: 18px; height: 18px; cursor: pointer; margin-top: 5px; accent-color: #e65100;">
-                        <label style="cursor: pointer; font-weight: ${item.type === 'random' ? 'bold' : 'normal'}; color: #8c3a3a; line-height: 1.4;">${item.label}</label>
+                <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #f4f1ea;">
+                    <div style="display: flex; align-items: flex-start; gap: 10px; flex: 1; padding-right: 10px;">
+                        <input type="checkbox" class="cart-item-checkbox" value="${index}" onchange="checkCartSelection()" style="width: 18px; height: 18px; flex-shrink: 0; cursor: pointer; margin-top: 4px; accent-color: #e65100;">
+                        <label style="cursor: pointer; font-weight: ${item.type === 'random' ? 'bold' : 'normal'}; color: #8c3a3a; line-height: 1.5;">${item.label}</label>
                     </div>
-                    <span onclick="removeCartItem(${index})" style="cursor: pointer; color: #e53935; font-size: 1.2em; padding-left: 10px;" title="Xóa">🗑️</span>
+                    <span onclick="removeCartItem(${index})" style="cursor: pointer; color: #e53935; font-size: 1.3em; flex-shrink: 0;" title="Xóa">🗑️</span>
                 </div>`;
             if (item.type === 'random') rHTML += row; else sHTML += row;
         });
-        listDiv.innerHTML = rHTML + (rHTML && sHTML ? `<div style="text-align: center; margin: 15px 0; position: relative;"><hr style="border-top: 1px dashed #d9d0c1;"><span style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #fffdf9; padding: 0 10px; color: #bcaaa4; font-size: 0.8em; font-weight: bold;">MÓN LẺ ĐƯỢC CHỌN</span></div>` : '') + sHTML;
+        
+        // Đoạn này đã thêm white-space: nowrap và margin: 25px 0 để không bị đè chữ
+        listDiv.innerHTML = rHTML + (rHTML && sHTML ? `<div style="text-align: center; margin: 25px 0; position: relative;"><hr style="border-top: 1px dashed #d9d0c1;"><span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #fffdf9; padding: 0 10px; color: #bcaaa4; font-size: 0.75em; font-weight: bold; white-space: nowrap;">MÓN LẺ ĐƯỢC CHỌN</span></div>` : '') + sHTML;
     }
     goToScreen1();
     document.getElementById('cartModal').style.display = 'block';
     checkCartSelection();
 }
-
 function closeCartModal() {
     document.body.style.overflow = 'auto';
     document.getElementById('cartModal').style.display = 'none';
